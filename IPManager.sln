@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{C9198C37-CE12-40B0-B1CA-0D90186AF33C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{F2CBF86C-10D7-4EB6-988E-E25D8FFB1CF5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{AD0E65A5-8BD1-4BB7-B797-36CD2DBFBDD3}"
+	ProjectSection(SolutionItems) = preProject
+		IPManager.Library.Models\IPDetails.cs = IPManager.Library.Models\IPDetails.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{701FFC95-7C87-4C6C-BFD3-235EDF714A17}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPManager.Library.Integration.ExternalApi", "IPManager.Library.Integration.WebApi\IPManager.Library.Integration.ExternalApi.csproj", "{35F22883-B393-4FD3-B3E4-AF85ACA65D44}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPManager.Library.Integration.ExternalApi.Abstractions", "IPManager.Library.Integration.WebApi.Abstractions\IPManager.Library.Integration.ExternalApi.Abstractions.csproj", "{4DAC6200-3E1E-4389-8859-2289BFF33DE5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{78E4515E-70B3-4A3D-8CDF-EA15F0E05D82}"
+	ProjectSection(SolutionItems) = preProject
+		IPManager.Library.Models\IPDetails.cs = IPManager.Library.Models\IPDetails.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{D8302C1B-A990-4A10-B750-E4893A4D5BE1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPManager.WebApi.Data", "IPManager.WebApi.Data\IPManager.WebApi.Data.csproj", "{985CA683-5D3E-42E6-9F1E-EDFB723EAA5B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPManager.WebApi.Data.Abstractions", "IPManager.WebApi.Data.Abstractions\IPManager.WebApi.Data.Abstractions.csproj", "{BA5847F6-F6B3-4ED2-A148-40F076C7460F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPManager.WebApi", "IPManager.WebApi\IPManager.WebApi.csproj", "{24C75276-A935-4247-84BC-A1CCF1CA121C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35F22883-B393-4FD3-B3E4-AF85ACA65D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F22883-B393-4FD3-B3E4-AF85ACA65D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F22883-B393-4FD3-B3E4-AF85ACA65D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35F22883-B393-4FD3-B3E4-AF85ACA65D44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DAC6200-3E1E-4389-8859-2289BFF33DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DAC6200-3E1E-4389-8859-2289BFF33DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DAC6200-3E1E-4389-8859-2289BFF33DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DAC6200-3E1E-4389-8859-2289BFF33DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{985CA683-5D3E-42E6-9F1E-EDFB723EAA5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{985CA683-5D3E-42E6-9F1E-EDFB723EAA5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{985CA683-5D3E-42E6-9F1E-EDFB723EAA5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{985CA683-5D3E-42E6-9F1E-EDFB723EAA5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA5847F6-F6B3-4ED2-A148-40F076C7460F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA5847F6-F6B3-4ED2-A148-40F076C7460F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA5847F6-F6B3-4ED2-A148-40F076C7460F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA5847F6-F6B3-4ED2-A148-40F076C7460F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24C75276-A935-4247-84BC-A1CCF1CA121C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24C75276-A935-4247-84BC-A1CCF1CA121C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24C75276-A935-4247-84BC-A1CCF1CA121C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24C75276-A935-4247-84BC-A1CCF1CA121C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD0E65A5-8BD1-4BB7-B797-36CD2DBFBDD3} = {C9198C37-CE12-40B0-B1CA-0D90186AF33C}
+		{701FFC95-7C87-4C6C-BFD3-235EDF714A17} = {F2CBF86C-10D7-4EB6-988E-E25D8FFB1CF5}
+		{35F22883-B393-4FD3-B3E4-AF85ACA65D44} = {701FFC95-7C87-4C6C-BFD3-235EDF714A17}
+		{4DAC6200-3E1E-4389-8859-2289BFF33DE5} = {701FFC95-7C87-4C6C-BFD3-235EDF714A17}
+		{78E4515E-70B3-4A3D-8CDF-EA15F0E05D82} = {F2CBF86C-10D7-4EB6-988E-E25D8FFB1CF5}
+		{D8302C1B-A990-4A10-B750-E4893A4D5BE1} = {C9198C37-CE12-40B0-B1CA-0D90186AF33C}
+		{985CA683-5D3E-42E6-9F1E-EDFB723EAA5B} = {D8302C1B-A990-4A10-B750-E4893A4D5BE1}
+		{BA5847F6-F6B3-4ED2-A148-40F076C7460F} = {D8302C1B-A990-4A10-B750-E4893A4D5BE1}
+		{24C75276-A935-4247-84BC-A1CCF1CA121C} = {C9198C37-CE12-40B0-B1CA-0D90186AF33C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50FE14D3-BE18-4BEA-81B5-08C145E0DB48}
+	EndGlobalSection
+EndGlobal
