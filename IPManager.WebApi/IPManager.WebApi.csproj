@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -6,9 +6,11 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IPManager.Library.Integration.WebApi\IPManager.Library.Integration.ExternalApi.csproj" />
     <ProjectReference Include="..\IPManager.Library.Models.Abstractions\IPManager.Library.Models.Abstractions.csproj" />
   </ItemGroup>
 

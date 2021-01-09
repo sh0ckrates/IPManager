@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace IPManager.Library.Integration.WebApi.RequestProvider
+namespace IPManager.Library.Integration.ExternalApi.RequestProvider
 {
     public class RequestProvider : IRequestProvider
     {   

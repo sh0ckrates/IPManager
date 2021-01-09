@@ -5,15 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IPManager.Library.Integration.WebApi.Abstractions\IPManager.Library.Integration.ExternalApi.Abstractions.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ServiceClients\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IPManager.Library.Integration.WebApi.Abstractions\IPManager.Library.Integration.ExternalApi.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>
