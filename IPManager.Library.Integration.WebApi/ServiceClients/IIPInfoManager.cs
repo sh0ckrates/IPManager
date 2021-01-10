@@ -9,12 +9,12 @@ using IPManager.Library.Models;
 
 namespace IPManager.Library.Integration.ExternalApi.ServiceClients
 {
-    public class IPInfoProvider : IIPInfoProvider
+    public class IIPInfoManager : Abstractions.ServiceClients.IIPInfoManager
     {
         private IRequestProvider _requestProvider;
         private readonly IPManagerConfig _ipManagerConfig;
 
-        public IPInfoProvider(IRequestProvider requestProvider, IPManagerConfig config)
+        public IIPInfoManager(IRequestProvider requestProvider, IPManagerConfig config)
         {
             _requestProvider = requestProvider;
             _ipManagerConfig = config;

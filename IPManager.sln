@@ -29,13 +29,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{8B0675
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{86F72A51-0A1C-471F-A75F-F20D53345997}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPManager.WebApi.Models", "IPManager.WebApi.Models\IPManager.WebApi.Models.csproj", "{BA1D66AF-1732-41F9-9864-559AD7A5529B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPManager.WebApi.Models", "IPManager.WebApi.Models\IPManager.WebApi.Models.csproj", "{BA1D66AF-1732-41F9-9864-559AD7A5529B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C7804B27-326C-45E4-BC3B-773DD0C33E56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPManager.WebApi.Core", "IPManager.WebApi.Core\IPManager.WebApi.Core.csproj", "{CE665755-9DE5-42A8-B2A6-D32CEE0A1ADD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPManager.WebApi.Core", "IPManager.WebApi.Core\IPManager.WebApi.Core.csproj", "{CE665755-9DE5-42A8-B2A6-D32CEE0A1ADD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPManager.WebApi.Core.Abstractions", "IPManager.WebApi.Core.Abstractions\IPManager.WebApi.Core.Abstractions.csproj", "{C272016B-2826-4FEC-8A7C-C67196FF18FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPManager.WebApi.Core.Abstractions", "IPManager.WebApi.Core.Abstractions\IPManager.WebApi.Core.Abstractions.csproj", "{C272016B-2826-4FEC-8A7C-C67196FF18FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

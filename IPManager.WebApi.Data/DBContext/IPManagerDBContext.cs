@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Text;
 using IPManager.Library.Models;
+using IPManager.WebApi.Data.Abstractions.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace IPManager.WebApi.Data.DBContext
@@ -15,7 +16,7 @@ namespace IPManager.WebApi.Data.DBContext
 
         }
 
-        public DbSet<IPDetails> IPAddresses { get; set; }
+        public DbSet<IPDetailsDto> IPDetail  { get; set; }
     }
 
 }

@@ -4,6 +4,7 @@ namespace IPManager.Library.Models
 {
     public class IPDetails
     {
+
         [JsonProperty("ip")]
         public string Ip { get; set; }
 
@@ -17,9 +18,9 @@ namespace IPManager.Library.Models
         public string Continent { get; set; }
 
         [JsonProperty("latitude")]
-        public double Latitude { get; set; }
+        public double? Latitude { get; set; }
 
         [JsonProperty("longitude")]
-        public double Longitude { get; set; }
+        public double? Longitude { get; set; }
     }
 }

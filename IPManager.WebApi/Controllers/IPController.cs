@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Threading.Tasks;
+using IPManager.WebApi.Core.Abstractions.Providers;
 
 namespace IPManager.WebApi.Controllers
 {

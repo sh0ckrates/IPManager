@@ -4,11 +4,10 @@ using System.Text;
 using System.Threading.Tasks;
 using IPManager.Library.Models;
 
-namespace IPManager.WebApi.Core.Abstractions.Processors
+namespace IPManager.Library.Integration.ExternalApi.Abstractions.ServiceClients
 {
-    public interface IIPDetailsProcessor
+    public interface IIPInfoManager
     {
         Task<IPDetails> GetDetails(string ip);
-
     }
 }

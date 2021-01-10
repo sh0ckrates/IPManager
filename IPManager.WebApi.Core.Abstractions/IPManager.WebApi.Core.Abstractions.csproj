@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\IPManager.Library.Integration.WebApi.Abstractions\IPManager.Library.Integration.ExternalApi.Abstractions.csproj" />
     <ProjectReference Include="..\IPManager.WebApi.Data.Abstractions\IPManager.WebApi.Data.Abstractions.csproj" />
   </ItemGroup>

@@ -5,6 +5,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using IPManager.Library.Models;
+using IPManager.WebApi.Data.Abstractions.Entities;
 using IPManager.WebApi.Data.Abstractions.Repositories;
 using IPManager.WebApi.Data.DBContext;
 using Microsoft.EntityFrameworkCore;
@@ -26,24 +27,21 @@ namespace IPManager.WebApi.Data.Repositories
 
         public async Task<bool> CheckIpExistenceAsync(string ip)
         {
-            var exists = false;
-            IQueryable<IPDetails> query = _db.IPAddresses;
-            if (_db.IPAddresses.Any(o => o.Ip == ip)) exists = true;
-            return exists;
+            return _db.IPDetail.Any(o => o.Ip == ip);
         }
 
 
-        public async Task<IPDetails> GetIPDetailsAsync(string ip)
+        public async Task<IPDetailsDto> GetIPDetailsAsync(string ip)
         {
-            IQueryable<IPDetails> query = _db.IPAddresses;
+            IQueryable<IPDetailsDto> query = _db.IPDetail;
             query = query.Where(a => a.Ip == ip);
             return await query.FirstOrDefaultAsync();
         }
 
 
-        public async Task InsertIPDetailsAsync(IPDetails details) 
+        public async Task InsertIPDetailsAsync(IPDetailsDto details) 
         {
-            _db.Add<IPDetails>(details);
+            _db.Add<IPDetailsDto>(details);
             _db.SaveChanges();
         }
 
