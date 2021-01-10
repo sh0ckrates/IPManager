@@ -22,6 +22,7 @@ namespace IPManager.Library.Integration.ExternalApi.ServiceClients
 
         public async Task<IPDetails> GetDetails(string ip)
         {
+
             var uri = String.Format(_ipManagerConfig.ExternalApiUri, ip);
             return await _requestProvider.GetSingleItemRequest<IPDetails>(uri);
         }

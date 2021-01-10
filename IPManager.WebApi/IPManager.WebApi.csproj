@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="5.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
@@ -12,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\IPManager.Library.Integration.WebApi\IPManager.Library.Integration.ExternalApi.csproj" />
     <ProjectReference Include="..\IPManager.Library.Models.Abstractions\IPManager.Library.Models.Abstractions.csproj" />
+    <ProjectReference Include="..\IPManager.WebApi.Data\IPManager.WebApi.Data.csproj" />
   </ItemGroup>
 
 

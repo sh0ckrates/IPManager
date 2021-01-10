@@ -3,6 +3,8 @@ using IPManager.Library.Integration.ExternalApi.Abstractions.ServiceClients;
 using IPManager.Library.Integration.ExternalApi.RequestProvider;
 using IPManager.Library.Integration.ExternalApi.ServiceClients;
 using IPManager.Library.Integration.WebApi.Abstractions.RequestProvider;
+using IPManager.WebApi.Data.Abstractions.CacheProvider;
+using IPManager.WebApi.Data.CacheProvider;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -33,11 +35,12 @@ namespace IPManager.WebApi
                 .Get<IPManagerConfig>();
             services.AddSingleton(libraryConfig);
 
+            services.AddScoped<ICacheProvider, CacheProvider>();
 
             services.AddSingleton<IIPInfoProvider, IPInfoProvider>();
             services.AddSingleton<IRequestProvider, RequestProvider>();
 
-            services.AddSwaggerGen(c => c.SwaggerDoc(name: "v1", new OpenApiInfo { Title = "IP Address Processor API", Version = "v1" }));
+            services.AddSwaggerGen(c => c.SwaggerDoc(name: "v1", new OpenApiInfo { Title = "IP Address Manager API", Version = "v1" }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
