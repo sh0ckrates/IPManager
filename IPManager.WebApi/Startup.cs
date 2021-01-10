@@ -58,6 +58,14 @@ namespace IPManager.WebApi
             services.AddSingleton(cacheConfig);
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new IPDetailsProfile());
+            });
+            var mapper = mapperConfig.CreateMapper();
+
+            services.AddSingleton(mapper);
+
             services.AddSingleton<ICacheProvider, CacheProvider>();
             services.AddSingleton<IRequestProvider, RequestProvider>();
 

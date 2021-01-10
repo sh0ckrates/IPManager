@@ -60,15 +60,7 @@ namespace IPManager.WebApi.Core.Providers
         {
             var uri = String.Format(_ipManagerConfig.ExternalApiUri, ip);
             var details = await _requestProvider.GetSingleItemRequest<IPDetails>(uri);
-            var detailsDto = new IPDetailsDto()
-            {
-                Ip = details.Ip,
-                City = details.City,
-                Country = details.Country,
-                Continent = details.Continent,
-                Longitude = details.Longitude,
-                Latitude = details.Latitude
-            };       //_mapper.Map<IPDetailsDto>(details);
+            var detailsDto = _mapper.Map<IPDetailsDto>(details);
             await _detailsRepository.InsertIPDetailsAsync(detailsDto);
             _cacheProvider.SetCache(ip,details);
             return details;
