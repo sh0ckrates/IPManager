@@ -27,5 +27,11 @@ namespace IPManager.WebApi.Data.CacheProvider
             var cacheSeconds = _config.Duration;
             _cache.Set(key, value, DateTimeOffset.Now.AddSeconds(cacheSeconds));
         }
+
+        public bool KeyExists<T>(string key) where T : class
+        {
+            object value;
+            return _cache.TryGetValue(key, out value);
+        }
     }
 }

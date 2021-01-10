@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using IPManager.Library.Integration.ExternalApi.Abstractions.Exceptions;
+﻿using IPManager.Library.Integration.ExternalApi.Abstractions.Exceptions;
 using IPManager.Library.Integration.ExternalApi.Abstractions.ServiceClients;
-using IPManager.Library.Models.Abstractions;
-using IPManager.WebApi.Models;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System;
+using System.Threading.Tasks;
 
 namespace IPManager.WebApi.Controllers
 {

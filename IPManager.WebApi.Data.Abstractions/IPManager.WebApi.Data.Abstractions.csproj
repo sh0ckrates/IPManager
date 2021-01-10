@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IPManager.Library.Models\IPManager.Library.Models.csproj" />
     <ProjectReference Include="..\IPManager.WebApi.Models\IPManager.WebApi.Models.csproj" />
   </ItemGroup>
 

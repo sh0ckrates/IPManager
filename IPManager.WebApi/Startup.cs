@@ -3,7 +3,11 @@ using IPManager.Library.Integration.ExternalApi.Abstractions.ServiceClients;
 using IPManager.Library.Integration.ExternalApi.RequestProvider;
 using IPManager.Library.Integration.ExternalApi.ServiceClients;
 using IPManager.Library.Integration.WebApi.Abstractions.RequestProvider;
+using IPManager.WebApi.Core.Abstractions.Processors;
+using IPManager.WebApi.Core.Processors;
 using IPManager.WebApi.Data.Abstractions.CacheProvider;
+using IPManager.WebApi.Data.Abstractions.Configuration;
+using IPManager.WebApi.Data.Abstractions.Repositories;
 using IPManager.WebApi.Data.CacheProvider;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,11 +37,20 @@ namespace IPManager.WebApi
             var libraryConfig = Configuration
                 .GetSection("IPManager:LibraryConfig")
                 .Get<IPManagerConfig>();
+            var cacheConfig = Configuration
+                .GetSection("IPManager:CacheConfig")
+                .Get<CacheConfig>();
+            var apiConfig = Configuration
+                .GetSection("IPManager:WebApiConfig")
+                .Get<WebApiConfig>();
+
             services.AddSingleton(libraryConfig);
 
             services.AddScoped<ICacheProvider, CacheProvider>();
 
             services.AddSingleton<IIPInfoProvider, IPInfoProvider>();
+            services.AddSingleton<IIPDetailsRepository, IIPDetailsRepository>();
+            services.AddSingleton<IIPDetailsProcessor, IPDetailsProcessor>();
             services.AddSingleton<IRequestProvider, RequestProvider>();
 
             services.AddSwaggerGen(c => c.SwaggerDoc(name: "v1", new OpenApiInfo { Title = "IP Address Manager API", Version = "v1" }));

@@ -14,7 +14,12 @@
   <ItemGroup>
     <ProjectReference Include="..\IPManager.Library.Integration.WebApi\IPManager.Library.Integration.ExternalApi.csproj" />
     <ProjectReference Include="..\IPManager.Library.Models.Abstractions\IPManager.Library.Models.Abstractions.csproj" />
+    <ProjectReference Include="..\IPManager.WebApi.Core\IPManager.WebApi.Core.csproj" />
     <ProjectReference Include="..\IPManager.WebApi.Data\IPManager.WebApi.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
 
 

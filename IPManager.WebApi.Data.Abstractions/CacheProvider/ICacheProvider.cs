@@ -10,5 +10,6 @@ namespace IPManager.WebApi.Data.Abstractions.CacheProvider
     {
         T GetFromCache<T>(string key) where T : class;
         void SetCache<T>(string key, T value) where T : class;
+        bool KeyExists<T>(string key) where T : class;
     }
 }
