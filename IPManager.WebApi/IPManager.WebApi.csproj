@@ -21,9 +21,5 @@
     <ProjectReference Include="..\IPManager.WebApi.Data\IPManager.WebApi.Data.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
-
 
 </Project>

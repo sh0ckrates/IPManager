@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace IPManager.WebApi.Controllers
 {
     [ApiController]
+    [Route("api/ipmanager/[controller]")]
     public class IPControllerBase : ControllerBase
     {
         protected const string EmptyIPMessage = "No ip specified on request.";
+        protected const string EmptyRequest = "The request is empty.";
     }
 }

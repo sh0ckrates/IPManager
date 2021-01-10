@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net;
-using System.Text;
-using IPManager.Library.Models;
-using IPManager.WebApi.Data.Abstractions.Entities;
+﻿using IPManager.WebApi.Data.Abstractions.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace IPManager.WebApi.Data.DBContext
@@ -16,7 +11,8 @@ namespace IPManager.WebApi.Data.DBContext
 
         }
 
-        public DbSet<IPDetailsDto> IPDetail  { get; set; }
+        public DbSet<IPDetailsDto> IPDetail { get; set; }
+        public DbSet<BatchDto> Batch { get; set; }
+        public DbSet<BatchIPDetailsDto> BatchIPDetails { get; set; }
     }
-
 }

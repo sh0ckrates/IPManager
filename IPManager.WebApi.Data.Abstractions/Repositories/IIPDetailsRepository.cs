@@ -12,5 +12,6 @@ namespace IPManager.WebApi.Data.Abstractions.Repositories
         Task<IPDetailsDto> GetIPDetailsAsync(string ip);
         Task InsertIPDetailsAsync(IPDetailsDto details);
         Task<bool> CheckIpExistenceAsync(string ip);
+        Task MergeIPDetailsAsync(IEnumerable<IPDetailsDto> ipDetailsDtos);
     }
 }

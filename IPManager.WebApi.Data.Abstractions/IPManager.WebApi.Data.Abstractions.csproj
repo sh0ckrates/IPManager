@@ -12,7 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IPManager.Library.Models\IPManager.Library.Models.csproj" />
-    <ProjectReference Include="..\IPManager.WebApi.Models\IPManager.WebApi.Models.csproj" />
   </ItemGroup>
 
 </Project>

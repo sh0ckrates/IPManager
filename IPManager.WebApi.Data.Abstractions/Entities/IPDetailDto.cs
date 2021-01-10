@@ -9,23 +9,18 @@ namespace IPManager.WebApi.Data.Abstractions.Entities
 {
     public class IPDetailsDto
     {
-        [Key]
-        [Column("IPAddress")]
+        public int Id { get; set; }
+
         public string Ip { get; set; }
 
-        [Column("City")]
         public string City { get; set; }
 
-        [Column("Country")]
         public string Country { get; set; }
 
-        [Column("Continent")]
         public string Continent { get; set; }
 
-        [Column("Latitude")]
         public double? Latitude { get; set; }
 
-        [Column("Longitude")]
         public double? Longitude { get; set; }
     }
 }

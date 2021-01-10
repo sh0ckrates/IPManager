@@ -30,6 +30,28 @@ namespace IPManager.WebApi.Data.Repositories
             return _db.IPDetail.Any(o => o.Ip == ip);
         }
 
+        public async Task MergeIPDetailsAsync(IEnumerable<IPDetailsDto> ipDetailsDtos)
+        {
+            foreach (var dto in ipDetailsDtos)
+            {
+                if (!await _db.IPDetail.AnyAsync(i => i.Ip == dto.Ip))
+                {
+                    await InsertIPDetailsAsync(dto);
+                }
+                else
+                {
+                    var ipDetails = await _db.IPDetail.FirstAsync(d => d.Ip == dto.Ip);
+                    ipDetails.City = dto.City;
+                    ipDetails.Country = dto.Country;
+                    ipDetails.Continent = dto.Continent;
+                    ipDetails.Longitude = dto.Longitude;
+                    ipDetails.Latitude = dto.Latitude;
+                    _db.IPDetail.Update(ipDetails);
+                }
+
+            }
+            await _db.SaveChangesAsync();
+        }
 
         public async Task<IPDetailsDto> GetIPDetailsAsync(string ip)
         {
@@ -41,14 +63,8 @@ namespace IPManager.WebApi.Data.Repositories
 
         public async Task InsertIPDetailsAsync(IPDetailsDto details) 
         {
-            _db.Add<IPDetailsDto>(details);
-            _db.SaveChanges();
+            await _db.AddAsync<IPDetailsDto>(details);
+            await _db.SaveChangesAsync();
         }
-
-        //public void Add<T>(T entity) where T : class
-        //{
-        //    _context.Add(entity);
-        //}
-
     }
 }
