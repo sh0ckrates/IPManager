@@ -9,8 +9,11 @@ using IPManager.WebApi.Data.Abstractions.CacheProvider;
 using IPManager.WebApi.Data.Abstractions.Configuration;
 using IPManager.WebApi.Data.Abstractions.Repositories;
 using IPManager.WebApi.Data.CacheProvider;
+using IPManager.WebApi.Data.DBContext;
+using IPManager.WebApi.Data.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -34,6 +37,7 @@ namespace IPManager.WebApi
             services.AddMemoryCache();
 
 
+
             var libraryConfig = Configuration
                 .GetSection("IPManager:LibraryConfig")
                 .Get<IPManagerConfig>();
@@ -44,14 +48,23 @@ namespace IPManager.WebApi
                 .GetSection("IPManager:WebApiConfig")
                 .Get<WebApiConfig>();
 
-            services.AddSingleton(libraryConfig);
 
-            services.AddScoped<ICacheProvider, CacheProvider>();
+
+            services.AddDbContext<IPManagerDBContext>(cfg =>
+            {
+                cfg.UseSqlServer(apiConfig.ConnectionString);
+            });
+
+            services.AddSingleton(libraryConfig);
+            services.AddSingleton(cacheConfig);
+
+            services.AddSingleton<ICacheProvider, CacheProvider>();
 
             services.AddSingleton<IIPInfoProvider, IPInfoProvider>();
-            services.AddSingleton<IIPDetailsRepository, IIPDetailsRepository>();
-            services.AddSingleton<IIPDetailsProcessor, IPDetailsProcessor>();
             services.AddSingleton<IRequestProvider, RequestProvider>();
+
+            services.AddScoped<IIPDetailsProcessor, IPDetailsProcessor>();
+            services.AddScoped<IIPDetailsRepository, IPDetailsRepository>();
 
             services.AddSwaggerGen(c => c.SwaggerDoc(name: "v1", new OpenApiInfo { Title = "IP Address Manager API", Version = "v1" }));
         }

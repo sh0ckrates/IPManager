@@ -54,7 +54,7 @@ namespace IPManager.WebApi.Core.Processors
         {
             var uri = String.Format(_ipManagerConfig.ExternalApiUri, ip);
             var details = await _requestProvider.GetSingleItemRequest<IPDetails>(uri);
-            await _detailsRepository.InsertIPDetailsAsync(ip, details);
+            await _detailsRepository.InsertIPDetailsAsync(details);
             _cacheProvider.SetCache(ip,details);
             return details;
         }

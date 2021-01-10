@@ -9,7 +9,7 @@ namespace IPManager.WebApi.Data.Abstractions.Repositories
     public interface IIPDetailsRepository
     {
         Task<IPDetails> GetIPDetailsAsync(string ip);
-        Task InsertIPDetailsAsync(string ip, IPDetails details);
+        Task InsertIPDetailsAsync(IPDetails details);
         Task<bool> CheckIpExistenceAsync(string ip);
     }
 }

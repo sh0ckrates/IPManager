@@ -4,6 +4,9 @@ namespace IPManager.Library.Models
 {
     public class IPDetails
     {
+        [JsonProperty("ip")]
+        public string Ip { get; set; }
+
         [JsonProperty("city")]
         public string City { get; set; }
 
